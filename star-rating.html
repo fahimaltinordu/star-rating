@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Rating</title>
+    <script src="https://kit.fontawesome.com/a90a45c743.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            padding:0;
+            margin:0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+        }
+        form {
+            width:400px;
+            height:200px;
+        }
+        section {
+            background-color: rgb(216, 216, 216);
+            width:100%;
+            height:inherit;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row-reverse;
+        }
+        section label {
+            cursor:pointer;
+            display:inherit;
+            align-items: center;
+            justify-content: center;
+            text-shadow: 0 2px 3px rgba(0,0,0,0.5);
+        }
+        section label i{
+            color:gray;
+            font-size: 60px;
+            transition:all 0.3s;
+        }
+        section label:hover i{
+            color:goldenrod;
+        }
+        section label:hover ~  label i{
+            color:goldenrod;
+        }
+        input {
+            display:none;
+        }
+        input:checked ~ label i{
+            color:goldenrod;
+        }
+    </style>
+</head>
+<body>
+
+     <form action="">
+        
+        <section>
+            <input type="radio" name="rating" id="five" value="5">
+            <label for="five">
+                <i class="fas fa-star"></i>
+            </label>
+            
+            <input type="radio" name="rating" id="four" value="4" >
+            <label for="four">
+                <i class="fas fa-star"></i>
+            </label>
+
+            <input type="radio" name="rating" id="three" value="3">
+            <label for="three">
+                <i class="fas fa-star"></i>
+            </label>
+
+            <input type="radio" name="rating" id="two" value="2" >
+            <label for="two">
+                <i class="fas fa-star"></i>
+            </label>
+
+            <input type="radio" name="rating" id="one" value="1">
+            <label for="one">
+                <i class="fas fa-star"></i>
+            </label>
+
+             
+        </section>
+     </form>       
+</body>
+</html>
